@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora API</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="panel hero">
+            <div>
+                <div class="badge">Calculadora conectada à API</div>
+
+                <h1>Calcule rápido com processamento no backend.</h1>
+
+                <p>
+                    Use os botões da calculadora ou digite diretamente pelo teclado.
+                    As operações são enviadas para sua API Java Spring Boot.
+                </p>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">⌨️</div>
+                        <div>
+                            <strong>Teclado ativo</strong><br>
+                            Digite números, operadores e pressione Enter para calcular.
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🔌</div>
+                        <div>
+                            <strong>Integração com API</strong><br>
+                            Soma, subtração, multiplicação e divisão são processadas no backend.
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <div>
+                            <strong>Interface modernizada</strong><br>
+                            Layout externo com cards, atalhos e área de anúncios.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut-box">
+                <h3>Atalhos do teclado</h3>
+
+                <div class="shortcuts">
+                    <span class="key">0-9</span>
+                    <span class="key">+</span>
+                    <span class="key">-</span>
+                    <span class="key">*</span>
+                    <span class="key">/</span>
+                    <span class="key">Enter</span>
+                    <span class="key">=</span>
+                    <span class="key">Backspace</span>
+                    <span class="key">Esc</span>
+                    <span class="key">C</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-wrap">
+            <div class="calculator">
+                <div class="calculator-top">
+                    <span class="calculator-title">Calculadora com API</span>
+                    <span class="status" id="status">Online</span>
+                </div>
+
+                <div class="display">
+                    <div class="history" id="history"></div>
+                    <div class="current-value" id="display">0</div>
+                </div>
+
+                <div class="buttons">
+                    <button class="clear" onclick="clearAll()" data-key="c" style="grid-column: span 2;">C</button>
+                    <button class="operator" onclick="chooseOperator('division')" data-key="/">÷</button>
+                    <button class="operator" onclick="chooseOperator('multiplication')" data-key="*">×</button>
+
+                    <button class="number" onclick="appendNumber('7')" data-key="7">7</button>
+                    <button class="number" onclick="appendNumber('8')" data-key="8">8</button>
+                    <button class="number" onclick="appendNumber('9')" data-key="9">9</button>
+                    <button class="operator" onclick="chooseOperator('subtraction')" data-key="-">−</button>
+
+                    <button class="number" onclick="appendNumber('4')" data-key="4">4</button>
+                    <button class="number" onclick="appendNumber('5')" data-key="5">5</button>
+                    <button class="number" onclick="appendNumber('6')" data-key="6">6</button>
+                    <button class="operator" onclick="chooseOperator('sum')" data-key="+">+</button>
+
+                    <button class="number" onclick="appendNumber('1')" data-key="1">1</button>
+                    <button class="number" onclick="appendNumber('2')" data-key="2">2</button>
+                    <button class="number" onclick="appendNumber('3')" data-key="3">3</button>
+                    <button class="equal" onclick="compute()" data-key="enter" style="grid-row: span 2; height: 130px;">=</button>
+
+                    <button class="number" onclick="appendNumber('0')" data-key="0" style="grid-column: span 2;">0</button>
+                    <button class="number" onclick="appendNumber('.')" data-key=".">,</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="ads">
+            <article class="ad-card">
+                <image src="https://assets-blog.hostgator.com.br/wp-content/uploads/2019/04/Blog-br.webp" alt="Anúncio" class="ad-image api">
+                    <div class="ad-content">
+                        <span class="ad-label">Anúncio</span>
+                    <h2>Hospede sua API na nuvem</h2>
+                    <p>Suba seus containers com segurança, escala e monitoramento utilizando a HostGator.</p>
+                    <a href="https://www.hostgator.com.br/servidor-vps" target="_blank" class="ad-button">Conhecer solução</a>
+                </div>
+            </article>
+            
+            <article class="ad-card">
+                <image src="https://img-c.udemycdn.com/course/480x270/2167814_a0e6_5.jpg" alt="Anúncio" class="ad-image api">
+                <div class="ad-content">
+                    <span class="ad-label">Anúncio</span>
+                    <h2>Curso de Java com Spring Boot</h2>
+                    <p>Aprenda a criar APIs, configurar CORS, Docker e deploy.</p>
+                    <a href="https://www.udemy.com/course/spring-5-with-spring-boot-2/?srsltid=AfmBOor8u3ZV4C8iT_9WzAbZzIed5Y5s0pyWmTcfE_oeBESoMMZFCrn8" target="_blank" class="ad-button">Ver curso</a>
+                </div>
+            </article>
+        </aside>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
