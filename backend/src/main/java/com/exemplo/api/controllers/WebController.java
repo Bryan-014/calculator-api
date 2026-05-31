@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.Map;
 import com.exemplo.api.models.Request;
-import com.exemplo.api.models.Response;
-import com.exemplo.api.models.Operations;
+import com.exemplo.api.utils.Operations;
+import com.exemplo.api.utils.Response;
 
 @RestController
 public class WebController {

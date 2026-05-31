@@ -1,4 +1,6 @@
-package com.exemplo.api.models;
+package com.exemplo.api.utils;
+
+import com.exemplo.api.models.Request;
 
 public class Operations {
     public static double getSum(Request request) {
