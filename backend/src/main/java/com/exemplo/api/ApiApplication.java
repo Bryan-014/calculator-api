@@ -46,10 +46,6 @@ public class ApiApplication {
                 String origin = httpRequest.getHeader("Origin");
                 String method = httpRequest.getMethod();
 
-                System.out.println("CORS FILTER EXECUTOU");
-                System.out.println("Origin recebido: " + origin);
-                System.out.println("Method recebido: " + method);
-
                 if (origin != null && ALLOWED_ORIGINS.contains(origin)) {
                     httpResponse.setHeader("Access-Control-Allow-Origin", origin);
                     httpResponse.setHeader("Vary", "Origin");
