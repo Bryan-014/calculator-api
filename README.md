@@ -4,14 +4,9 @@ Este projeto faz parte de um trabalho da diciplina de Back-end onde o objetivo Ã
 
 ## Rodando o Projeto
 
-### Realizar o build do container:
+### Executar o Back-end:
 ```
-docker build --no-cache -t minha-api-java .
-```
-
-### Subir o container:
-```
-docker run -d -p 8080:8080 --name api-container minha-api-java
+docker compose up -d --build
 ```
 
 ### Abrir o Front-end

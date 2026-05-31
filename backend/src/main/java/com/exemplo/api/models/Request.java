@@ -1,4 +1,4 @@
-package com.exemplo.api;
+package com.exemplo.api.models;
 
 public class Request {
     private double num1;
